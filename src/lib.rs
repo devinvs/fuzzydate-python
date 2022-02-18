@@ -48,7 +48,7 @@ fn parse_with_default_time(s: String, t: &PyAny) -> PyResult<DateTimeResult> {
 
 /// A Python module implemented in Rust.
 #[pymodule]
-fn fuzzydate(_py: Python, m: &PyModule) -> PyResult<()> {
+fn pyfuzzydate(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(parse, m)?)?;
     m.add_function(wrap_pyfunction!(parse_with_default_time, m)?)?;
     Ok(())
